@@ -47,6 +47,13 @@ module.exports = function(grunt) {
 				options: {
 					livereload: true
 				}
+			},
+			sass: {
+				files: '**/*.css',
+				tasks: ['sass'],
+				options: {
+					livereload: true
+				}
 			}
 		},
 		jshint: {
@@ -59,12 +66,13 @@ module.exports = function(grunt) {
 		},
 		csslint: {
 			options: {
-				csslintrc: '.csslintrc',
+				csslintrc: '.csslintrc'
 			},
 			all: {
 				src: watchFiles.clientCSS
 			}
 		},
+
 		uglify: {
 			production: {
 				options: {
@@ -158,7 +166,7 @@ module.exports = function(grunt) {
 	});
 
 	// Default task(s).
-	grunt.registerTask('default', ['lint', 'concurrent:default']);
+	grunt.registerTask('default', ['lint', 'sass' , 'concurrent:default']);
 
 	// Debug task.
 	grunt.registerTask('debug', ['lint', 'concurrent:debug']);
