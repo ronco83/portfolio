@@ -15,14 +15,23 @@ module.exports = {
 			css: [
 				'public/lib/bootstrap/dist/css/bootstrap.css',
 				'public/lib/bootstrap/dist/css/bootstrap-theme.css',
-				'public/css/style.css'
+				'public/css/style/stylesheets/screen.css'
 			],
 			js: [
+				'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js',
 				'public/lib/angular/angular.js',
 				'public/lib/angular-resource/angular-resource.js', 
 				'public/lib/angular-ui-router/release/angular-ui-router.js',
 				'public/lib/angular-ui-utils/ui-utils.js',
-				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js'
+				'public/lib/angular-animate/angular-animate.js',
+				'public/lib/angular-sanitize/angular-sanitize.js',
+				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
+				'public/lib/jscrollpane.min.js',
+				'public/lib/mousewheel.js',
+				'public/lib/tweenmax/TweenMax.min.js',
+				'public/lib/hammer.min.js',
+				'public/lib/jquery.bxslider.min.js',
+				'public/js/functions.js'
 			]
 		},
 		css: [

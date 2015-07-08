@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 		serverJS: ['gruntfile.js', 'server.js', 'config/**/*.js', 'app/**/*.js'],
 		clientViews: ['public/modules/**/views/**/*.html'],
 		clientJS: ['public/js/*.js', 'public/modules/**/*.js'],
-		clientCSS: ['public/modules/**/*.css'],
+		clientCSS: ['public/modules/**/*.css' , 'public/css/style/stylesheets/*.css'],
 		mochaTests: ['app/tests/**/*.js']
 	};
 
@@ -48,13 +48,6 @@ module.exports = function(grunt) {
 					livereload: true
 				}
 			},
-			sass: {
-				files: '**/*.css',
-				tasks: ['sass'],
-				options: {
-					livereload: true
-				}
-			}
 		},
 		jshint: {
 			all: {
@@ -166,7 +159,7 @@ module.exports = function(grunt) {
 	});
 
 	// Default task(s).
-	grunt.registerTask('default', ['lint', 'sass' , 'concurrent:default']);
+	grunt.registerTask('default', ['lint', 'concurrent:default']);
 
 	// Debug task.
 	grunt.registerTask('debug', ['lint', 'concurrent:debug']);
